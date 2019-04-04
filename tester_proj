@@ -1,0 +1,98 @@
+<html>
+<head>
+	<title>
+		  marks validation
+	</title>
+	<script type = "text/javascript">
+	  
+	   function comp(){  
+           var a=parseInt(document.getElementById("name").value)	
+	   var b=parseInt(document.getElementById("age").value)
+	   var c=parseInt(document.getElementById("m1").value)	   
+	   var d=parseInt(document.getElementById("m2").value)
+	   var e=parseInt(document.getElementById("m3").value)
+	   var f=parseInt(document.getElementById("m4").value)
+	     
+				  	
+				if(b<16)
+				document.write("Age invalid");
+				else{
+				document.write(b);
+				document.write("<br>")
+				if(c<100/3)
+				document.write("failed");
+				else
+				document.write(c);
+				document.write("<br>")
+				if(d<100/3)
+				document.write("failed");
+				else
+				document.write(d);
+				document.write("<br>")
+				if(e<100/3)
+				document.write("failed");
+				else
+				document.write(e);
+				document.write("<br>")
+				if(f<100/3)
+				document.write("failed");
+				else
+				document.write(f);
+				}
+			  }
+	function valid1()  {
+		
+			var a=parseInt(document.getElementById("m1").value)	
+				if(a>100 || a<0){
+			document.getElementById("m1").value=" "	
+			document.getElementById("m1").focus()
+			}
+		}
+	function valid2()  {
+		
+			var a=parseInt(document.getElementById("m2").value)	
+				if(a>100  || a<0){
+			document.getElementById("m2").value=" "	
+			document.getElementById("m2").focus()
+			}
+		}
+	function valid3()  {
+		
+			var a=parseInt(document.getElementById("m3").value)	
+				if(a>100  || a<0){
+			document.getElementById("m3").value=" "	
+			document.getElementById("m3").focus()
+			}
+		}
+	function valid4()  {
+		
+			var a=parseInt(document.getElementById("m4").value)	
+				if(a>100 || a<0){
+			document.getElementById("m4").value=" "	
+			document.getElementById("m4").focus()
+			}
+		}			
+</script>
+</head>
+<body align=center style="background-color:Pink;" <font size="10" color="black"> 
+<form>
+	   <div>
+		Enter name: <input type="text" id="name">
+	</div><div><br>
+		Enter age: <input type="text" id="age">
+	</div><div><br>
+		Enter marks1: <input type="text" id="m1">
+	</div><div><br>
+		Enter marks2: <input type="text" id="m2" onFocus="valid1()">
+	</div><div><br>
+		Enter marks3: <input type="text" id="m3" onFocus="valid2()">
+	</div><div><br>
+		Enter marks4: <input type="text" id="m4" onFocus="valid3()">
+	</div><div><br>
+		<input type="submit" value="ISVALID"  onFocus="valid4()" onmouseover="comp()" onmouseout="">
+	</div>     <br>    	
+</form>
+
+</body>
+
+</html>
